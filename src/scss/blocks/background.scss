@@ -1,0 +1,35 @@
+@use '../mixins/responsive.scss' as *;
+
+.oval {
+  width: 510px;
+  height: 1018px;
+  border-radius: 15.9375rem;
+
+  &--left {
+    background: linear-gradient(27deg, rgb(135, 57, 255), rgb(232, 68, 255));
+    position: absolute;
+    top: -509px;
+    left: -322px;
+  }
+
+  /*   &--right {
+    background: linear-gradient(60deg, rgba(136, 57, 255, 0.03), rgba(233, 68, 255, 0.03));
+    position: absolute;
+    bottom: -1445px;
+    right: -188px;
+  } */
+
+  @include responsive(laptop) {
+    &--left {
+      position: absolute;
+      top: -318px;
+      left: -90px;
+    }
+
+    /*     &--right {
+      position: absolute;
+      top: 1137px;
+      left: 1115px;
+    } */
+  }
+}

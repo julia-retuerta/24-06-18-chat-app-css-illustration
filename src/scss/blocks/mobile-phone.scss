@@ -1,0 +1,44 @@
+@use '../mixins/pseudo.scss' as *;
+
+.mobile-phone {
+  display: flex;
+  justify-content: center;
+
+  &__background {
+    position: relative;
+    width: 247px;
+    height: 505px;
+    background-color: #ffffff;
+    border-radius: 1.875rem;
+    box-shadow: 0 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.25);
+    margin-top: 4rem;
+
+    &::after {
+      @include pseudo(129px, 29px) {
+        top: 0;
+        left: 59px;
+        background-color: #ffffff;
+        border-radius: 0 0 0.875rem 0.875rem;
+      }
+    }
+
+    &::before {
+      @include pseudo(228px, 483px) {
+        top: 11px;
+        left: 9.5px;
+        background-color: #f5f3f7;
+        border-radius: 1.25rem;
+      }
+    }
+  }
+
+  &__dog-walker-user {
+    position: absolute;
+    top: 11px;
+    left: 9.5px;
+    width: 228px;
+    height: 66px;
+    border-radius: 20px 20px 6px 6px;
+    background: linear-gradient(74deg, #8739ff, #e844ff);
+  }
+}
