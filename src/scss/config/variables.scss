@@ -5,9 +5,13 @@
 :root {
   --bg-color: #fafafa;
   --gradient: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
-  --mobile-background: #ffffff;
+  --gradient-reverse: linear-gradient(160deg, #e844ff 0%, #8739ff 100%);
+  --mobile-background: #f5f3f7;
   --message-color: #9341c8;
   --message-background: #eee5f4;
+  --type-a-message: #C5C9CC; 
+
+  --white: #ffffff;
 }
 
 /* Variables SASS */

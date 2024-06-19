@@ -1,13 +1,16 @@
 @use '../mixins/responsive.scss' as *;
 
 .booking {
+  position: relative;
+  top: 130px;
   width: 311px;
   text-align: center;
-  margin-top: 4rem;
   margin-inline: auto;
 
   @include responsive(laptop) {
+    top: 309px;
     width: 445px;
     text-align: left;
+    margin: 0;
   }
 }

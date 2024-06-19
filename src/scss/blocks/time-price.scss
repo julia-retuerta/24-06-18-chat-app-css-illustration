@@ -1,0 +1,11 @@
+.time-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__price {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}

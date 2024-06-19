@@ -1,4 +1,5 @@
 @use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
 
 .main {
   &::after,
@@ -15,6 +16,12 @@
   &::before {
     left: 188px;
     top: 427px;
-    opacity: 0.3;
+    opacity: 0.03;
+  }
+
+  @include responsive(laptop) {
+    display: flex;
+    justify-content: center;
+    gap: 125px;
   }
 }

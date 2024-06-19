@@ -1,16 +1,18 @@
-@use '../mixins/pseudo.scss' as *;
+/* se hace con top: 64px y no con margin porque los márgenes no se utilizan para mover cosas */
 
-/* se hace con top porque los márgenes no se utilizan para mover cosas */
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+
 .mobile {
   position: relative;
   top: 64px;
-
   width: 247px;
   height: 505px;
   margin-inline: auto;
-  border: 11px solid white;
-  border-radius: 30px;
+  border: 11px solid var(--white);
+  border-radius: 1.875rem;
   background-color: var(--mobile-background);
+  box-shadow: 0 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.25);
 
   &__header {
     display: flex;
@@ -18,52 +20,98 @@
     gap: 0.5rem;
     height: 66px;
     padding-inline: 16px;
+    padding-top: 20px;
     background-image: var(--gradient);
-    border-radius: 20px 20px 6px 6px;
+    border-radius: 1.25rem 1.25rem 0.375rem 0.375rem;
 
     &::after {
-      @include pseudo(129px, 29px);
-      background-color: #fff;
-      top: -11px;
-      left: 50%;
-      translate: -50%;
-      border-radius: 0 0 14px 14px;
+      @include pseudo(129px, 29px) {
+        background-color: var(--white);
+        top: -10px;
+        left: 50%;
+        translate: -50%;
+        border-radius: 0 0 14px 14px;
+      }
     }
   }
 
   &__messages {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 11px 7.5px 10px 7.5px;
     gap: 8px;
   }
 
   &__message {
-    width: 50%;
+    width: fit-content;
+    max-width: 60%;
     margin-block: 0;
     padding: 6px 9px;
-    border-radius: 10px 10px 10px 4px;
+    border-radius: 0.625rem 0.625rem 0.625rem 0.25rem;
     color: var(--message-color);
     background-color: var(--message-background);
     font-size: 0.5rem;
+    line-height: 11px;
 
-    &-container {
+    &-container-right > * {
+      margin-block: 8px;
+    }
+
+    &-container-img {
       display: flex;
       gap: 0.5rem;
+      justify-content: flex-end;
 
       & > * {
         width: 40px;
-        border-radius: 10px;
+        border-radius: 0.625rem;
       }
     }
 
     &--right {
       margin-left: auto;
+      gap: 0.5rem;
     }
 
-    &--right:not(&-container) {
-      background-color: #fff;
+    &--right:not(&-container-img) {
+      background-color: var(--white);
+      border-radius: 0.625rem 0.625rem 0.25rem 0.625rem;
+      box-shadow: 0px 10px 5px -5px rgba(62, 39, 83, 0.05);
     }
+  }
+
+  &__booking-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 75%;
+    border-radius: 0.625rem 0.625rem 0.625rem 0.25rem;
+    padding: 0.6875rem 1rem 0.625rem 0.5rem;
+    color: var(--white);
+    background-image: var(--gradient-reverse);
+    font-size: 0.5rem;
+  }
+
+  &__type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1.0625rem;
+    padding: 4.8px 4px 4.8px 19px;
+    margin-top: 4px;
+    color: var(--type-a-message);
+    background-color: var(--white);
+    font-size: 0.5625rem;
+    line-height: normal;
+
+    &-a-message {
+      margin-block: 0;
+    }
+  }
+
+  @include responsive(laptop) {
+    top: 148px;
+    margin: 0;
   }
 }
 
