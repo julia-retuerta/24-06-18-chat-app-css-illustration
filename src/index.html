@@ -17,10 +17,40 @@
 
   <body>
     <main class="main">
-      <!--       <div class="oval oval--left"></div>
-      <div class="oval oval--right"></div> -->
+      <div class="mobile">
+        <div class="mobile__header">
+          <img class="icon-arrow" src="./assets/images/arrow.svg" alt="arrow icon" />
 
-      <section class="content">
+          <div class="user">
+            <img class="mobile__profile-image" src="./assets/images/avatar.jpg" alt="avatar image" />
+
+            <div class="user__info">
+              <span class="user__name">Samuel Green</span>
+              <span class="user__status">Available to walk</span>
+            </div>
+          </div>
+
+          <img class="icon-points" src="./assets/images/three-dots-menu.svg" alt="three dots menu" />
+        </div>
+
+        <div class="mobile__messages">
+          <p class="mobile__message">That sounds great. I’d be happy to discuss more.</p>
+          <p class="mobile__message">Could you send over some pictures of your dog, please?</p>
+
+          <div class="mobile__message-container mobile__message--right">
+            <img src="./assets/images/dog-image-1.jpg" alt="dog image" />
+            <img src="./assets/images/dog-image-2.jpg" alt="dog image" />
+            <img src="./assets/images/dog-image-3.jpg" alt="dog image" />
+          </div>
+
+          <p class="mobile__message mobile__message--right">Here are a few pictures. She’s a happy girl!</p>
+          <p class="mobile__message mobile__message--right">Can you make it?</p>
+        </div>
+      </div>
+
+      <!-- Meter el móvil directamente en un div porque es un elemento decorativo y no importa si está o no para entender el objetivo de la web -->
+
+      <!-- <section class="content">
         <section class="mobile-phone">
           <div class="mobile-phone__background">
             <div class="mobile-phone__dog-walker-user"></div>
@@ -28,14 +58,14 @@
         </section>
 
         <section class="booking">
-          <h1 class="booking__title">Simple Booking</h1>
-          <p class="booking__text">
+          <h1 class="title">Simple Booking</h1>
+          <p class="text">
             Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements
             and make bookings. Once the walk has been completed you can rate your walker and book again all through the
             chat.
           </p>
         </section>
-      </section>
+      </section> -->
     </main>
 
     <script type="module" src="./js/index.js"></script>

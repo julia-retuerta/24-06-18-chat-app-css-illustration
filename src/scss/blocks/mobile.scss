@@ -1,0 +1,120 @@
+@use '../mixins/pseudo.scss' as *;
+
+/* se hace con top porque los márgenes no se utilizan para mover cosas */
+.mobile {
+  position: relative;
+  top: 64px;
+
+  width: 247px;
+  height: 505px;
+  margin-inline: auto;
+  border: 11px solid white;
+  border-radius: 30px;
+  background-color: var(--mobile-background);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 66px;
+    padding-inline: 16px;
+    background-image: var(--gradient);
+    border-radius: 20px 20px 6px 6px;
+
+    &::after {
+      @include pseudo(129px, 29px);
+      background-color: #fff;
+      top: -11px;
+      left: 50%;
+      translate: -50%;
+      border-radius: 0 0 14px 14px;
+    }
+  }
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 8px;
+  }
+
+  &__message {
+    width: 50%;
+    margin-block: 0;
+    padding: 6px 9px;
+    border-radius: 10px 10px 10px 4px;
+    color: var(--message-color);
+    background-color: var(--message-background);
+    font-size: 0.5rem;
+
+    &-container {
+      display: flex;
+      gap: 0.5rem;
+
+      & > * {
+        width: 40px;
+        border-radius: 10px;
+      }
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+
+    &--right:not(&-container) {
+      background-color: #fff;
+    }
+  }
+}
+
+/* Esto también podría ser margin-left: auto, valen cualquiera de las dos opciones */
+
+/* &--right {
+  align-items: self-end;
+} */
+
+//
+//
+
+/* .mobile-phone {
+  display: flex;
+  justify-content: center;
+
+  &__background {
+    position: relative;
+    width: 247px;
+    height: 505px;
+    background-color: #ffffff;
+    border-radius: 1.875rem;
+    box-shadow: 0 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.25);
+    margin-top: 4rem;
+
+    &::after {
+      @include pseudo(129px, 29px) {
+        top: 0;
+        left: 59px;
+        background-color: #ffffff;
+        border-radius: 0 0 0.875rem 0.875rem;
+      }
+    }
+
+    &::before {
+      @include pseudo(228px, 483px) {
+        top: 11px;
+        left: 9.5px;
+        background-color: #f5f3f7;
+        border-radius: 1.25rem;
+      }
+    }
+  }
+
+  &__dog-walker-user {
+    position: absolute;
+    top: 11px;
+    left: 9.5px;
+    width: 228px;
+    height: 66px;
+    border-radius: 20px 20px 6px 6px;
+    background: linear-gradient(74deg, #8739ff, #e844ff);
+  }
+} */

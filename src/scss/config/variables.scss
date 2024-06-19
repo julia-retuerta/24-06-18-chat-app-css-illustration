@@ -1,7 +1,13 @@
+/* Variables CSS */
+/* Hay que utilizar estas porque siguen existiendo después de compilar, las de SASS se convierten en el código de color, por tanto, se destruyen y no pueden modificarse */
+/* escribir aquí */
+
 :root {
-  /* Variables CSS */
-  /* escribir aquí */
-  --primary-color: red;
+  --bg-color: #fafafa;
+  --gradient: linear-gradient(225deg, #e844ff 0%, #8739ff 100%);
+  --mobile-background: #ffffff;
+  --message-color: #9341c8;
+  --message-background: #eee5f4;
 }
 
 /* Variables SASS */
