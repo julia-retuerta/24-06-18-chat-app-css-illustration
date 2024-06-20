@@ -2,6 +2,13 @@
 @use '../mixins/responsive.scss' as *;
 
 .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  align-items: center;
   &::after,
   &::before {
     @include pseudo(510px, 1018px) {
@@ -14,14 +21,19 @@
   }
 
   &::before {
-    left: 188px;
+    left: calc(100% - 260px);
     top: 427px;
     opacity: 0.03;
   }
 
   @include responsive(laptop) {
-    display: flex;
-    justify-content: center;
+    flex-direction: row;
     gap: 125px;
   }
 }
+
+/* Para dejar alineado un elemento de fondo siempre a la derecha: */
+
+/* left: calc(100% - 260px); */
+
+/* Es decir, restar la mitad del tamaño del elemento al left: 100%. */

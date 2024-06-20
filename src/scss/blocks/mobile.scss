@@ -4,17 +4,17 @@
 @use '../mixins/responsive.scss' as *;
 
 .mobile {
-  position: relative;
-  top: 64px;
   width: 247px;
   height: 505px;
   margin-inline: auto;
+  margin-bottom: 64px;
   border: 11px solid var(--white);
   border-radius: 1.875rem;
   background-color: var(--mobile-background);
   box-shadow: 0 1.875rem 3.75rem -0.625rem rgba(62, 39, 83, 0.25);
 
   &__header {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0.5rem;

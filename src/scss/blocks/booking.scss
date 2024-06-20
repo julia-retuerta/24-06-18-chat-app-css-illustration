@@ -2,13 +2,11 @@
 
 .booking {
   position: relative;
-  top: 130px;
   width: 311px;
   text-align: center;
   margin-inline: auto;
 
   @include responsive(laptop) {
-    top: 309px;
     width: 445px;
     text-align: left;
     margin: 0;
